@@ -39,14 +39,18 @@ content:
 
         quote: >
           This is an intelligent AI system that can extract different anamoulous events(Accidents, robbery, Shoplifting etc) from CCTV streams and static videos
-        description: | # this will include new lines to allow paragraphs
-          -This R&D project is aimed at resolving the longstanding security issues that metropolitan cities have by automating the detection of different anomalous events(Shooting, Road Accidents, Explosions, etc). It is categorized under the Action Recognition problem.
+        description: >-
+
+          - This R&D project is aimed at resolving the longstanding security issues that metropolitan cities have by automating the detection of different anomalous events(Shooting, Road Accidents, Explosions, etc). It is categorized under the Action Recognition problem.
           Knowledge distillation is used to teach the RGB model how to mimic optical flow calculation. This makes this model a very optimal solution as it requires very few calculations as compared to RGB + Optical Flow, while it retains accuracy.
-          -We modified the UCF Crime dataset, converting it into a 14-class problem rather than the two-class problem. This volume of this dataset is not sufficient to train an accurate model, so it was first trained on the Kinetic-400 dataset to enrich it with the global features. Then we used our Crime dataset to feed the last layers for the local features.
-          -As for the architecture of the model itself, we have used ResNeXt (a 3D variant of ResNet) as it was computationally less intensive.
-          -For extracting events, we used a sliding time window that seeks anomalous events in that current window and then chain the event scores with the previous and upcoming scores, if applicable.
-          -Flask was used to prototype a website and deploy the model for User interaction. The model was coded in PyTorch and was supported with NumPy, Scikit-learn, and Pandas. The model was tested both on CPU(i7 8700k) and GPU(GTX 1080ti). GPU version fetched a total of 52fps and CPU version, after model pruning, fetched 14 fps.
-          -I used GCP compute instance to serve the model to client and used load balancer to add computer power in case we need to serve the same model to multiple clients.
+          - We modified the UCF Crime dataset, converting it into a 14-class problem rather than the two-class problem. This volume of this dataset is not sufficient to train an accurate model, so it was first trained on the Kinetic-400 dataset to enrich it with the global features. Then we used our Crime dataset to feed the last layers for the local features.
+          - As for the architecture of the model itself, we have used ResNeXt (a 3D variant of ResNet) as it was computationally less intensive.
+          - For extracting events, we used a sliding time window that seeks anomalous events in that current window and then chain the event scores with the previous and upcoming scores, if applicable.
+          - Flask was used to prototype a website and deploy the model for User interaction. The model was coded in PyTorch and was supported with NumPy, Scikit-learn, and Pandas. The model was tested both on CPU(i7 8700k) and GPU(GTX 1080ti). GPU version fetched a total of 52fps and CPU version, after model pruning, fetched 14 fps.
+          - I used GCP compute instance to serve the model to client and used load balancer to add computer power in case we need to serve the same model to multiple clients.
+
+
+
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)

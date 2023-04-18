@@ -29,7 +29,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: GhostNet: Anomalous Event Detection and Extraction using 3D CNN
+        title: GhostNet-Anomalous Event Detection and Extraction using 3D CNN
         link: https://github.com/HammadTufail/GhostNet
         # link_text: Project Website
         additional_links:
